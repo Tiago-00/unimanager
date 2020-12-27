@@ -9,13 +9,30 @@ public abstract class Person {
             protected  String email;
             protected  char gender;
 
-            public Person(String name, LocalDate birthDate, String email, char gender) {
+            public Person(String name, LocalDate birthDate, char gender) {
                 this.name = name;
                 this.birthDate = birthDate;
-                this.email = email;
                 this.gender = gender;
+                this.email = "";
             }
             
-            public abstract String getReference();
+            public String getName() {
+                return name;
+            }
+
+
+            public LocalDate getBirthDate() {
+                return birthDate;
+            }
+
+
+            public char getGender() {
+                return gender;
+            }
+
+
+			public abstract String getReference();
+
+           
 
 }

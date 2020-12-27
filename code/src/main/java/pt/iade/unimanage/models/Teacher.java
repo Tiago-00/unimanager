@@ -9,10 +9,9 @@ public class Teacher extends Person {
     private int mecNumber;
     private ArrayList<Unit> units;
 
-    public Teacher(String name, LocalDate birthDate, String email, char gender, int mecNumber, ArrayList<Unit> units) {
-        super(name, birthDate, email, gender);
+    public Teacher(String name, LocalDate birthDate, char gender) {
+        super(name, birthDate, gender);
         this.mecNumber = nextNumber;
-        this.units = units;
         nextNumber++;
         units = new ArrayList<Unit>();
         
@@ -27,12 +26,14 @@ public class Teacher extends Person {
         return units;
     }
 
-    
+
+        @Override
+    public String getReference(){
+        return "T<"+mecNumber+">";
+    }
 
     
 
-    
-
-   
+ 
     
 }

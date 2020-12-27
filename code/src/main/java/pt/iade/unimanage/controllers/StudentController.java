@@ -78,7 +78,8 @@ public class StudentController {
         public List<Enrolment> getEnrolments(@PathVariable("number") int number) throws NotFoundException{
         logger.info("Sending enrolments of student with number "+number);
         Student student = StudentRepository.getStudent(number);
-        if (student != null) return student.getEnrolments();
+            if (student != null) 
+                return student.getEnrolments();
         else throw new NotFoundException(""+number, "Student", "number");
     }
 
